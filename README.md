@@ -17,7 +17,15 @@
       
  * time_out
  
+     * keepalive_timeot
+     
+     * send_timeout
+ 
  * buffer_size
+ 
+     * getconf PAGESIZE
+     
+     * client_header_buffer_size
       
  * 單連接請求數上限
       

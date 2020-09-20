@@ -25,5 +25,5 @@
       
  * Core
       
- * EventDrive
+ * 事件訊號佇列長度的上限
 

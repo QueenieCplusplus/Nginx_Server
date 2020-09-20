@@ -1,2 +1,2 @@
-# https-github.com-QueenieCplusplus-Nginx_Server
+# Nginx Server
 伺服器的設定

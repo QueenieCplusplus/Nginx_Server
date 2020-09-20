@@ -18,7 +18,7 @@
  
          Client = worker_process * worker_connections / 2
          
-         其中 worker_connections 是指每條工作處理程序同時連接用戶端的最大數量。
+         其中 worker_connections 是指每條工作處理程序同時連接用戶端的最大數量，預設為 65535。
          建議設定為 65535，約莫一條工作處理程序可以做 65535 條連結到相應的用戶端，除以來回一趟，約莫服務 32467 個用戶端。
          此工作處理程序連結數量需要小於 open file resource limit (工作處理程序可以開啟的檔案控制代碼數量)，建議將此資源限制數量設定為 2390251。
          

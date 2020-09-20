@@ -1,5 +1,19 @@
 # Nginx Server
 
+  
+                                Moduel  |  Data |  File
+                                ________|_______|_________
+                                Registry|       |  Stack
+                                
+                                
+                                           ||  
+                                
+                             worker threads | slave process
+
+
+
+
+
 伺服器的設定 
 
  * 設定網路連接序列化

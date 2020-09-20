@@ -20,6 +20,9 @@
      * keepalive_timeot
      
      * send_timeout
+     
+            設定伺服器回應用戶端的逾時間，這時間是指伺服器和兩用戶端建立連線後，某活動之後的時間，
+            倘若此時間過後，用戶端無任何活動，伺服器則關閉連線 (L5 Session Layer 會議層含 Socket 通訊端)。
  
  * buffer_size
  

@@ -6,6 +6,7 @@
          Client = worker_process * worker_connections / 2
          
          其中 worker_connections 是指每條工作處理程序同時連接用戶端的最大數量。
+         建議設定為 65535。
 
  * 設定請求的根目錄
 

@@ -216,7 +216,13 @@
       
         通常是 80
       
-      * Socket, Unix 主機通訊端
+      * Socket, Unix 主機通訊端。 
+      
+      * path, 檔案路徑
+
+      * default server, 識別字 
+      
+        將虛擬主機設定為 address:port 的預設主機。 
  
 
 # 設定檔的結構

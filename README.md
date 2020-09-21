@@ -210,15 +210,26 @@
    
       * IP,虛擬網路位址
       
+              listen addr : port [default_server][setfib][backlog][rcvbuf][sndbuf][deferred][accept_filter][bind][ssl];
+      
         如為 IPv6 就需要用 [] 包覆。 
       
       * Port, 監聽通訊阜
+      
+             listen port [default_server][setfib][backlog][rcvbuf][sndbuf][deferred][accept_filter][deferred][bind][ipv6only][ssl];
+             
+             setfib 只有作用在 FreeBSD，此變數為監聽通訊端連結路由表，不常用。
+             
+             backlog 是指設定監聽函數 listen 最允許多少個網路連接同時處於暫停狀態，其他平台預設為 511。
+      
       
         通常是 80
       
       * Socket, Unix 主機通訊端。 
       
       * path, 檔案路徑
+      
+              listen unix:path [default_server][backlog][rcvbuf][sndbuf][accept_filter][deferred][bind][ssl];
 
       * default server, 識別字 
       

@@ -174,9 +174,14 @@
 
      * time_out
 
-         * keepalive_timeot
+         * keepalive_timeout
          
-                伺服器與使用者建立連線後
+                keepalive_timeout timeout [header_timeout]
+         
+                伺服器與使用者建立連線後，伺服器可以保持這些連線開啟一段時間，預設為 75s。
+                
+                header_timeout 則是可選項，是指回應封包的 Keep_Alive 域設定逾時間。
+              
 
          * Http, send_timeout
 

@@ -200,8 +200,24 @@ nginx.conf 文件中
                                
                                }
                                
-                        
-
+                               
+                               location {
+                               
+                                                              
+                               }
+                               
+                               
+                               location {
+                                                   
+                               
+                               }
+                               
+                               
+                               location {
+                                                                   
+                               
+                               }
+                               
 
                          }
                          

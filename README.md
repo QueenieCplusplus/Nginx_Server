@@ -203,6 +203,25 @@
        * IP 
        
               #ifconfig
+              
+              eth1 inet addr: 192.168.1.3 Bcast 192.168.1.255 Mask:255.255.255.0
+              
+        為 eth1 建立 ip 別名
+        
+              #ifconfig eth1: 0 192.168.1.31 netmask: 255.255.255.0 up
+              
+              #ifconfig eth1: 1 192.168.1.32 netmask: 255.255.255.0 up
+         
+        查看結果
+        
+              #ifconfig
+              
+              eth1 inet addr: 192.168.1.3 Bcast 192.168.1.255 Mask:255.255.255.0
+              
+              eth1:0 inet addr: 192.168.1.31 Bcast 192.168.1.255 Mask:255.255.255.0
+              
+              eth1:1 inet addr: 192.168.1.32 Bcast 192.168.1.255 Mask:255.255.255.0
+                     
 
        * DNS
 

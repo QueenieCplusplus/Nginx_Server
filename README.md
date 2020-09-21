@@ -10,7 +10,7 @@
                                            
                                                                （實現平行處理）
                                 
-                             worker threads | slave process   slave process   slave process  全域：設定允許產生的工作處理程序的數量
+                             worker threads | slave process   slave process   slave process      全域：設定允許產生的工作處理程序的數量
                              
                                                  /||\               /||\             /||\         
                                                 / || \             / || \           / || \       事件：connections 單一工作程序能處理的最大連接數設定  65535  

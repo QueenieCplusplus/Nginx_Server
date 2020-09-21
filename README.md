@@ -91,11 +91,8 @@
         user admin | group;
         
         只有被設定的使用者或是使用者群組才擁有許可權啟動伺服器的主處理程序
-
-
- * 最大連線數
       
- * MIME-Type
+ * Http, MIME-Type
       
  * time_out
  

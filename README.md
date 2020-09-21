@@ -77,11 +77,25 @@
 
                 listen unix:path [default_server][backlog][rcvbuf][sndbuf][accept_filter][deferred][bind][ssl];
 
-        * default server, 識別字 
+        * default server
 
           將虛擬主機設定為 address:port 的預設主機。 
+          
+        * deferred
+        
+        * accept_filter 
+        
+          設定監聽通訊阜對請求的過濾，被過濾的內容不能被接收和處理，此指令只對 FreeBSD 有效。
+          
+        * bind
+        
+          使用獨立 bind() 處理 address:port，一般情況下，對於通訊阜相同而 ip addr 不同的多個連接，
+          伺服器使用 bind() 處理通訊阜相同的所有連接。
+          
+        * ssl
+        
+          設定階段連線使用 ssl 模式進行，這和 HTTP 有關。
  
-
  ------------------------------------------
  
  * 事件

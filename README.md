@@ -175,6 +175,8 @@
      * time_out
 
          * keepalive_timeot
+         
+                伺服器與使用者建立連線後
 
          * Http, send_timeout
 

@@ -13,7 +13,7 @@
                              worker threads | slave process   slave process   slave process  設定允許產生的工作處理程序的數量
                              
                                                  /||\               /||\             /||\         
-                                                / || \             / || \           / || \       connections 最大連接數設定  65535  
+                                                / || \             / || \           / || \       connections 單一工作程序能處理的最大連接數設定  65535  
                                                /  || \            /  ||  \         /  ||  \    
                                                
                                             ｜｜｜｜｜｜｜ ｜｜｜｜｜｜  ｜｜｜｜｜｜ ｜｜｜｜｜｜ ｜｜   單連接請求上限數                                        
@@ -48,7 +48,7 @@
         
         以上設定數量，為工作處理程序有三條，外加主處理程序一條。
 
- * 最大連接數設定
+ * Events, 單一工作處理程序的最大連接數設定
  
          Client = worker_process * worker_connections / 2;
          

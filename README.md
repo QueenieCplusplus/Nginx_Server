@@ -149,6 +149,9 @@ nginx.conf 文件中
                    
 
               events {
+              
+                  
+                      event 區塊指令會影響伺服器與使用者的網路連接
 
 
 

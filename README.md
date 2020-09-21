@@ -18,23 +18,23 @@
 
  * 允許多個網路連接
  
-        multi_accept on | off
+        multi_accept on | off;
  
        工作處理程序有能力同時街都到多個新到達的網路連接。(如下可避免競奪)
 
  * 設定網路連接序列化
  
-        accept_mutex on
+        accept_mutex on;
         
         雖然主處理程序能適切分配資源和指令予工作處理程序，然而網路的連接需求可能對多個主處理程序產生競奪風險（同時多條處理程序被喚醒，雖然只有其中一條會實際執行任務），但多條被喚醒的主處理程序會造成系統的負擔，故網路連接變成序列化，防止多個主處理程序對連接爭搶。
  
  * 選擇事件模型
  
-       use method
+       use method;
  
  * 設定允許產生的工作處理程序的數量（實現平行處理）
  
-        worker_process 3 | auto | 1
+        worker_process 3 | auto | 1;
  
         此功能能實現伺服器平行處理服務的關鍵所在， worker_process 的數量越多，能支援平行處理的數量也越多。
         但此數量上限值受限於軟體、作業系統資源、硬體裝置（運算器、磁碟機）。
@@ -43,7 +43,7 @@
 
  * 可承受的用戶端最大數量
  
-         Client = worker_process * worker_connections / 2
+         Client = worker_process * worker_connections / 2;
          
          其中 worker_connections 是指每條工作處理程序同時連接用戶端的最大數量，預設為 65535。
          建議設定為 65535，約莫一條工作處理程序可以做 65535 條連結到相應的用戶端，除以來回一趟，約莫服務 32467 個用戶端。
@@ -77,7 +77,12 @@
      
      * DNS
      
- * 設定伺服器使用群
+ * 設定伺服器使用群（組）
+
+        user admin | group;
+        
+        只有被設定的使用者或是使用者群組才擁有許可權啟動伺服器的主處理程序
+
 
  * 最大連線數
       
@@ -95,11 +100,11 @@
  
  * buffer_size
  
-     * getconf PAGESIZE
+     * getconf PAGESIZE;
      
             設定伺服器允許用端端請求標頁首的緩衝區大小，預設為 1 KB（根據系統分頁大小可調整不同）
      
-     * client_header_buffer_size
+     * client_header_buffer_size;
      
             用戶端可能因為 cookie 中寫入較大的值，引發用戶端請求標頁首大於預設的 1 KB ，
             為了改善伺服器支援的功能，建議預設值調整為 4 KB。

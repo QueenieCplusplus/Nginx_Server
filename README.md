@@ -194,11 +194,11 @@
 
      * Http, 檔案引用
 
-     * Http｜Location, 單連接請求數上限
+     * Http｜Server|Location, 單連接請求數上限
      
-           keepalive_requests 10;
+           keepalive_requests 100;
      
-           最大上限數為 10
+           最大上限數為 100
 
      * Http, 設定允許的方式傳輸檔案
  

@@ -50,6 +50,8 @@
 
  * Events, 單一工作處理程序的最大連接數設定
  
+         worker_connections 65535;
+ 
          Client = worker_process * worker_connections / 2;
          
          其中 worker_connections 是指每條工作處理程序同時連接用戶端的最大數量，預設為 65535。
@@ -84,7 +86,7 @@
      
      * DNS
      
- * 設定伺服器使用群（組）
+ * Global, 設定伺服器使用群（組）
 
         user admin | group;
         
@@ -152,7 +154,7 @@ nginx.conf 文件中
                    (2)允許產生的工作處理程序數量
                    (3)處理程序PID儲存路徑
                    (4)log 儲存路徑
-                   (5)設定檔影用
+                   (5)設定檔引用
                    
 
               events {

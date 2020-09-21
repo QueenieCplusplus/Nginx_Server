@@ -48,7 +48,37 @@
             但此數量上限值受限於軟體、作業系統資源、硬體裝置（運算器、磁碟機）。
 
             以上設定數量，為工作處理程序有三條，外加主處理程序一條。
+            
+     * 設定網路監聽
+   
+   
+        * IP,虛擬網路位址
 
+                listen addr : port [default_server][setfib][backlog][rcvbuf][sndbuf][deferred][accept_filter][bind][ssl];
+
+          如為 IPv6 就需要用 [] 包覆。 
+
+        * Port, 監聽通訊阜
+
+               listen port [default_server][setfib][backlog][rcvbuf][sndbuf][deferred][accept_filter][deferred][bind][ipv6only][ssl];
+
+               setfib 只有作用在 FreeBSD，此變數為監聽通訊端連結路由表，不常用。
+
+               backlog 是指設定監聽函數 listen 最多允許多少個網路連接同時處於暫停狀態，其他平台預設為 511。
+
+
+          通常是 80
+
+        * Socket, Unix 主機通訊端。 
+
+        * path, 檔案路徑
+
+                listen unix:path [default_server][backlog][rcvbuf][sndbuf][accept_filter][deferred][bind][ssl];
+
+        * default server, 識別字 
+
+          將虛擬主機設定為 address:port 的預設主機。 
+ 
 
  ------------------------------------------
  
@@ -205,36 +235,6 @@
 
           每一個工作處理程序有自己事件訊號佇列用於暫存用戶端請求發生訊號，倘若超過長度上限，伺服器會轉用 poll 處理尚未處理的用戶端請求。為了確保用戶端平行處理請求數量和伺服器執行環境處理能力，建議預設為 1024。
 
-   * 設定網路監聽
-   
-   
-      * IP,虛擬網路位址
-      
-              listen addr : port [default_server][setfib][backlog][rcvbuf][sndbuf][deferred][accept_filter][bind][ssl];
-      
-        如為 IPv6 就需要用 [] 包覆。 
-      
-      * Port, 監聽通訊阜
-      
-             listen port [default_server][setfib][backlog][rcvbuf][sndbuf][deferred][accept_filter][deferred][bind][ipv6only][ssl];
-             
-             setfib 只有作用在 FreeBSD，此變數為監聽通訊端連結路由表，不常用。
-             
-             backlog 是指設定監聽函數 listen 最多允許多少個網路連接同時處於暫停狀態，其他平台預設為 511。
-      
-      
-        通常是 80
-      
-      * Socket, Unix 主機通訊端。 
-      
-      * path, 檔案路徑
-      
-              listen unix:path [default_server][backlog][rcvbuf][sndbuf][accept_filter][deferred][bind][ssl];
-
-      * default server, 識別字 
-      
-        將虛擬主機設定為 address:port 的預設主機。 
- 
 
 # 設定檔的結構
 

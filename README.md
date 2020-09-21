@@ -106,13 +106,15 @@
              
              types {
              
-                 text/html
+                 text/html                   # 後面追加檔案副檔名和分號結尾
                  image/gif
                  application/x-javascript
                  audio/midi
                  video/3gpp     
              
              }
+             
+             default_types mime-type;  # 需追加此句避免預設為 text/plain
         
         
 

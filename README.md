@@ -49,6 +49,12 @@
 
             以上設定數量，為工作處理程序有三條，外加主處理程序一條。
             
+            
+            
+   ![www](https://raw.githubusercontent.com/QueenieCplusplus/Nginx_Server/master/web_server.png)
+   
+   
+            
      * 設定網路監聽
      
      

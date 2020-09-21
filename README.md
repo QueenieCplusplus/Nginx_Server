@@ -170,8 +170,15 @@ nginx.conf 文件中
 
 
                          server {
-
-
+                         
+                         
+                         
+                               location {
+                               
+                               
+                               
+                               
+                               }
 
 
                          }

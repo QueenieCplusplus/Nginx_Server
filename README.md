@@ -97,6 +97,23 @@
         
         Nginx 伺服器作為 Web 伺服器時，必須能夠識別請求的資源類型。
         
+        設定方式：
+        
+             include mime.types;
+             default_type application/octet-stream;
+             
+             #cat mime.types
+             
+             types {
+             
+                 text/html
+                 image/gif
+                 application/x-javascript
+                 audio/midi
+                 video/3gpp     
+             
+             }
+        
         
 
      * time_out

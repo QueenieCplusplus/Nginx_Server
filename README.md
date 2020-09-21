@@ -202,7 +202,7 @@
 
        * IP 
        
-               listen 192.168.1.10 default_server; 
+              #ifconfig
 
        * DNS
 

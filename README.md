@@ -211,6 +211,12 @@
               #ifconfig eth1: 0 192.168.1.31 netmask: 255.255.255.0 up
               
               #ifconfig eth1: 1 192.168.1.32 netmask: 255.255.255.0 up
+              
+        也可使用此方式設定
+        
+        
+              # echo "ifconfig eth1: 0 192.168.1.31 netmask: 255.255.255.0 up" >> /etc/rc.local
+              # echo "ifconfig eth1: 1 192.168.1.32 netmask: 255.255.255.0 up" >> /etc/rc.local
          
         查看結果
         

@@ -50,6 +50,9 @@
             以上設定數量，為工作處理程序有三條，外加主處理程序一條。
             
      * 設定網路監聽
+     
+     
+                listen *:80 | *:8000 | *:8080;
    
    
         * IP,虛擬網路位址
@@ -61,12 +64,15 @@
         * Port, 監聽通訊阜
 
                listen port [default_server][setfib][backlog][rcvbuf][sndbuf][deferred][accept_filter][deferred][bind][ipv6only][ssl];
-
-               setfib 只有作用在 FreeBSD，此變數為監聽通訊端連結路由表，不常用。
-
-               backlog 是指設定監聽函數 listen 最多允許多少個網路連接同時處於暫停狀態，其他平台預設為 511。
                
-               rcvbuff 和 sndbuf 是分別設定監聽的 socket 接收和發送的快取區域大小。
+               
+               listen 192.168.1.10 default_server backlog=1024;
+
+            setfib 只有作用在 FreeBSD，此變數為監聽通訊端連結路由表，不常用。
+
+            backlog 是指設定監聽函數 listen 最多允許多少個網路連接同時處於暫停狀態，其他平台預設為 511，此範例為 1024條。
+                     
+            rcvbuff 和 sndbuf 是分別設定監聽的 socket 接收和發送的快取區域大小。
 
 
           通常是 80
@@ -78,7 +84,9 @@
                 listen unix:path [default_server][backlog][rcvbuf][sndbuf][accept_filter][deferred][bind][ssl];
 
         * default server
-
+        
+                listen 192.168.1.10 default_server; 
+                
           將虛擬主機設定為 address:port 的預設主機。 
           
         * deferred

@@ -8,7 +8,7 @@
                                 
                                            ||  
                                 
-                             worker threads | slave process   slave process   slave process 
+                             worker threads | slave process   slave process   slave process  設定允許產生的工作處理程序的數量（實現平行處理）
                              
                                                  /|\               /|\             /|\         
                                                 / | \             / | \           / | \       connections    

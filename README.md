@@ -6,10 +6,10 @@
                                 Registry|       |  Stack
                                 
                                 
-                                           ||                 Master Process
-                                           
+                                           ||                   Master Process
+                                                             /       |         \
                                                                （實現平行處理）
-                                
+                                                         /           |            \
                              worker threads | slave process   slave process   slave process      全域：設定允許產生的工作處理程序的數量
                              
                                                  /||\               /||\             /||\         

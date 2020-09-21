@@ -200,10 +200,17 @@
  
    * Server, 設定虛擬主機
 
-       * IP
+       * IP 
+       
+               listen 192.168.1.10 default_server; 
 
        * DNS
 
+              server_name name...;
+              server_name katesservice.com www.katesservice.com;
+              server_name *.katesservie.com www.katesservice.*; # 萬用字元只能用在三段式主機名稱。
+              
+              #也可以正規方式表示。
  
  ------------------------------------------
  

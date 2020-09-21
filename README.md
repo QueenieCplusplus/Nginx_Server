@@ -6,7 +6,7 @@
                                 Registry|       |  Stack
                                 
                                 
-                                           ||  
+                                           ||                 Master Process
                                            
                                                                （實現平行處理）
                                 

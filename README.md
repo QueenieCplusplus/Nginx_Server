@@ -8,8 +8,13 @@
                                 
                                            ||  
                                 
-                             worker threads | slave process
-
+                             worker threads | slave process   slave process   slave process 
+                             
+                                                 /|\               /|\             /|\         
+                                                / | \             / | \           / | \       connections    
+                                               /  |  \           /  |  \         /  |  \    
+                                               
+                                            ｜｜｜｜｜｜｜ ｜｜｜｜｜｜  ｜｜｜｜｜｜ ｜｜｜｜｜｜    單連接請求上限數                                        
 
 
 

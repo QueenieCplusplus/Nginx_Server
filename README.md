@@ -83,7 +83,21 @@
          
      * Http, log 自訂記錄檔 
 
-     * Http, MIME-Type
+     * Http, MIME-Type 網路資源的媒體類型
+        
+        * HTML
+        
+        * XML
+        
+        * GIF
+        
+        * Flash
+        
+        * JSON
+        
+        Nginx 伺服器作為 Web 伺服器時，必須能夠識別請求的資源類型。
+        
+        
 
      * time_out
 

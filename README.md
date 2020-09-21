@@ -380,6 +380,8 @@ nginx.conf 文件中
                                    此為設定網路請求資源的根目錄，
                                    所以當伺服器接收到 /data/index.html 的請求時，
                                    會在 /pattysfile/data 目錄下找到這個 index.html 資源。
+                                   
+                                   倘若需要臨時修改 uri 可以使用指令 alias。
                                                                  
                                }
                                    

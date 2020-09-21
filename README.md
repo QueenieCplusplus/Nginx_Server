@@ -267,7 +267,12 @@
 
             寫後端會碰到，略
 
-     * 設定請求的根目錄
+     * http|server|location, 設定請求的根目錄
+     
+            root path;
+            
+            當網頁伺服器收到網路請求後，首先要在伺服器指定目錄中尋找請求資源， root 可用來設定根目錄，
+            path 為根目錄路徑。
 
      * buffer_size
 
@@ -368,7 +373,13 @@ nginx.conf 文件中
                                
                                }
                                
-                               location {
+                               location /data/ {
+                               
+                                   root /pattysfile;
+                                   
+                                   此為設定網路請求資源的根目錄，
+                                   所以當伺服器接收到 /data/index.html 的請求時，
+                                   會在 /pattysfile/data 目錄下找到這個 index.html 資源。
                                                                  
                                }
                                    
